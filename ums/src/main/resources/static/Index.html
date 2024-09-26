@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PU University</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FFFFFF;
+            color: #bcb8f8;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #010048;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar-brand {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #02006c;
+            color: #ECF0F1;
+        }
+        .content {
+            padding: 30px;
+            text-align: center;
+            background-color: #b0aff8;
+            color: #02151a;
+        }
+        .content h2 {
+            color: #090088;
+        }
+        .btn-custom {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #090088;
+            color: #ECF0F1;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #e8e8f1;
+        }
+        .footer {
+            text-align: center; 
+            padding: 20px;
+            background-color: #010048;
+            color: #ECF0F1;
+        }
+        .card {
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            background-color: #090088;
+            color: #ECF0F1;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-body {
+            background: #010048;
+        }
+        #btn {
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #090088;
+            color: #ECF0F1;
+            border: none;  
+              }
+        #btn a{
+            color: #e8e8f0;
+        }
+        #btn:hover{
+            background-color: #e8e8f1;           
+        }
+        #btn a:hover{
+            color: #010048;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">PU University</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="btn">
+                    <a class="nav-link" href="login">Login</a>
+                </li>
+                <li class="nav-item" id="btn">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Welcome to PU University</h1>
+        <p>Your gateway to a brighter future</p>
+    </div>
+    
+    <div class="content">
+        <h2>About PU University</h2>
+        <p>
+            PU University is a leading institution of higher learning known for its excellence in teaching, research, and innovation.
+            Our campus is home to a diverse student body and a dedicated faculty committed to providing a transformative educational experience.
+        </p>
+        <p>
+            At PU University, we offer a wide range of undergraduate and postgraduate programs designed to equip students with the skills and knowledge needed to excel in their chosen fields.
+            Our state-of-the-art facilities and vibrant campus life provide the perfect environment for personal and academic growth.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Join Us</h5>
+                        <p class="card-text">Become a part of our vibrant community and start your journey towards excellence.</p>
+                        <a href="/register" class="btn btn-custom">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Already a Member?</h5>
+                        <p class="card-text">Log in to access your personalized dashboard and stay updated.</p>
+                        <a href="login" class="btn btn-custom">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 PU University. All rights reserved.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbarBrand = document.querySelector('.navbar-brand');
+            if (window.scrollY > 50) {
+                navbarBrand.style.margin = '0 auto';
+                navbarBrand.style.position = 'absolute';
+                navbarBrand.style.left = '50%';
+                navbarBrand.style.transform = 'translateX(-50%)';
+            } else {
+                navbarBrand.style.margin = '0';
+                navbarBrand.style.position = 'relative';
+                navbarBrand.style.left = '0';
+                navbarBrand.style.transform = 'translateX(0)';
+            }
+        });
+    </script>
+</body>
+</html>
